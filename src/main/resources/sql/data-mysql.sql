@@ -1,0 +1,16 @@
+insert into boards (title) values ('test1');
+insert into boards (title) values ('test21');
+insert into boards (title) values ('test341');
+insert into boards (title) values ('test41');
+insert into boards (title) values ('test51');
+insert into boards (title) values ('test61');
+insert into boards (title) values ('test71');
+insert into boards (title) values ('test81');
+insert into boards (title) values ('test91');
+insert into boards (title) values ('test10');
+insert into boards (title) values ('test11');
+insert into boards (title) values ('test12');
+insert into boards (title) values ('test13');
+insert into boards (title) values ('test14');
+insert into boards (title) values ('test15');
+insert into boards (title) values ('test16');

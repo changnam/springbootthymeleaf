@@ -12,9 +12,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.honsoft.service.BoardService;
+
 @Controller
 @RequestMapping("/")
 public class MainController {
+	
+	@Autowired
+	private BoardService boardService;
+	
 	//private String appMode;
 
     //@Autowired
@@ -87,5 +93,14 @@ public class MainController {
         //model.addAttribute("mode", appMode);
         
 		return "content";
+	}
+	
+	@GetMapping("/board")
+	public String board(Model model) {
+		model.addAttribute("datetime", new Date());
+        model.addAttribute("username", "Ömerrrr");
+        model.addAttribute("boardList", boardService.getAllBoards());
+        
+		return "board";
 	}
 }
