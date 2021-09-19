@@ -26,6 +26,6 @@ hs_err_pid*
 .settings/
 target/
 .factorypath
-mvn/
+.mvn/
 mvnw
 mvnw.cmd
