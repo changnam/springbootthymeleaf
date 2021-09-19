@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.0.2/css/bootstrap.min.css">
+    
+</head>
+<body class="container">
+
+<div class="jumbotron">
+    <h2>스프링 부트 게시판</h2>
+</div>
+
+ <div class="row" th:replace="fragments/block::article-list"></div>
+ 
+ <div class="row" th:replace="fragments/block::pagination"></div>
+
+</body>
+</html>

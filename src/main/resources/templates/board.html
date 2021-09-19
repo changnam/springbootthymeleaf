@@ -26,29 +26,33 @@
 </table>
 
 <nav style="text-align: center;">
-    <ul class="pagination">
-        <li class="disabled">
-            <a href="#" aria-label="First">
+    <ul class="pagination"
+        th:with="start=${T(Math).floor(boardList.number/10)*10 + 1},
+                    last=(${start + 9 < boardList.totalPages ? start + 9 : boardList.totalPages})">
+        <li>
+            <a th:href="@{/boards(page=1)}" aria-label="First">
                 <span aria-hidden="true">First</span>
             </a>
         </li>
-        <li class="disabled">
-            <a href="#" aria-label="Previous">
+
+        <li th:class="${boardList.first} ? 'disabled'">
+            <a th:href="${boardList.first} ? '#' :@{/boards(page=${boardList.number})}" aria-label="Previous">
                 <span aria-hidden="true">&lt;</span>
             </a>
         </li>
-        <li class="active"><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li>
-            <a href="#" aria-label="Next">
+
+        <li th:each="page: ${#numbers.sequence(start, last)}" th:class="${page == boardList.number + 1} ? 'active'">
+            <a th:text="${page}" th:href="@{/boards(page=${page})}"></a>
+        </li>
+
+        <li th:class="${boardList.last} ? 'disabled'">
+            <a th:href="${boardList.last} ? '#' : @{/boards(page=${boardList.number + 2})}" aria-label="Next">
                 <span aria-hidden="true">&gt;</span>
             </a>
         </li>
+
         <li>
-            <a href="#" aria-label="Last">
+            <a th:href="@{/boards(page=${boardList.totalPages})}" aria-label="Last">
                 <span aria-hidden="true">Last</span>
             </a>
         </li>

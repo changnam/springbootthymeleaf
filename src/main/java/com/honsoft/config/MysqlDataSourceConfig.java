@@ -52,7 +52,7 @@ public class MysqlDataSourceConfig {
 
 		ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
 		populator.setSqlScriptEncoding(env.getProperty("mysql.datasource.sql-script-encoding"));
-		//populator.addScript(new ClassPathResource("schema-mysql.sql"));
+		populator.addScript(new ClassPathResource("sql/schema-mysql.sql"));
 		populator.addScript(new ClassPathResource("sql/data-mysql.sql"));
 
 		initializer.setDatabasePopulator(populator);
