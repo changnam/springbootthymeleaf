@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+	<!-- head fragment -->
+	<th:block th:fragment="f-head">
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="imagetoolbar" content="no">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0" />
+		<meta name="title" content="한국금거래소" />
+		<meta name="publisher" content="한국금거래소" />
+		<meta name="author" content="한국금거래소" />
+		<meta name="robots" content="index,follow" />
+		<meta name="keywords"
+			content="금, 금시세, 금값, , 한국금, 포나인, 고가매입, 조폐공사, 금괴, 투자, 오늘의금시세, 금테크, 재테크, 선물, 거래소, 금화, 은화, 수집, 수집가, 은테크, 금거래소" />
+		<meta name="description" content="오늘의금시세, 금거래소" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta property="og:title" content="한국금거래소" />
+		<meta property="og:site_name" content="한국금거래소" />
+		<meta property="og:author" content="한국금거래소" />
+		<meta property="og:type" content="" />
+		<meta property="og:description" content="오늘의금시세,금고가매입,한국조폐공사, 금거래소" />
+		<meta property="og:url" content="http://www.test.co.kr/" />
+		<title>한국금거래소</title>
+
+		<link rel="canonical" href="http://www.test.co.kr/" />
+		<link rel="shortcut icon" href="/img/common/favicon.ico"
+			type="image/x-icon" />
+
+		<link rel="stylesheet" type="text/css" href="/css/aos.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="/css/superfish.css"
+			media="all" />
+		<link rel="stylesheet" type="text/css" href="/css/datepicker.css"
+			media="all" />
+		<link rel="stylesheet" type="text/css" href="/css/common.css"
+			media="all" />
+		<link rel="stylesheet" type="text/css" href="/css/layout.css"
+			media="all" />
+		<link rel="stylesheet" type="text/css" href="/css/main.css"
+			media="all" />
+		<link rel="stylesheet" type="text/css" href="/css/sub.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="/css/slick.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="/css/skeletabs.css" media="all" />
+
+		<script type="text/javascript" src="/bower_components/aos/dist/aos.js"></script>
+		<script type="text/javascript" src="/js/jquery.js"></script>
+		<script type="text/javascript" src="/js/superfish.js"></script>
+		<script type="text/javascript" src="/js/datapicker.js"></script>
+		<script type="text/javascript" src="/js/skeletabs.js"></script>
+		<script type="text/javascript" src="/js/umd.js"></script>
+		<script type="text/javascript" src="/js/findindex_polyfill_mdn.js"></script>
+		<script type="text/javascript" src="/js/eligrey-classlist-js-polyfill.js"></script>
+		<script type="text/javascript" src="/js/polyfill.min.js"></script>
+
+		<script type="text/javascript" src="/js/apexcharts.common"></script>
+		<script type="text/javascript" src="/js/apexcharts.min.js"></script>
+		<script type="text/javascript" src="/js/slick.min.js"></script>
+
+		<script type="text/javascript">
+			(function($) {
+
+				$(document).ready(function() {
+
+					// initialise plugin
+					var gmenu = $('#gmenu').superfish({});
+				});
+
+			})(jQuery);
+		</script>
+	</th:block>
+
+	<!-- f-header fragment -->
+	<th:block th:fragment="f-header">
+		<!--**헤더 영역 시작-->
+		<div class="top_uitt">
+			<div class="top_box">
+				<ul>
+					<li><a href="#" th:href="@{/company/ceoMessage}">회사소개</a></li>
+					<li><a href="#" th:href="@{/login/login}">로그인</a></li>
+					<li><a href="#" th:href="@{/membership/informationInput}">회원가입</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="header">
+			<div class="header_wrap">
+				<h1 class="logo" data-aos="zoom-in">
+					<a href="#" th:href="@{/}"> <img src="/img/common/logo.png" alt="로고" />
+					</a>
+				</h1>
+				<ul class="sf-menu" id="gmenu">
+					<li><a href="#" th:href="@{/jewerly/DomesticPrice}">귀금속시세</a>
+						<ul>
+							<li><a href="#" th:href="@{/jewerly/DomesticPrice}">국내시세</a></li>
+							<li><a href="#" th:href="@{/jewerly/internationalPrice}">국제시세</a></li>
+							<li><a href="#" th:href="@{/jewerly/diamondPrice}">다이아몬드 시세</a></li>
+							<li><a href="#" th:href="@{/jewerly/securitiesGoldBar}">유가증권</a></li>
+						</ul></li>
+					<li><a href="#" th:href="@{/souvnir/inquiry}">기념품제작</a>
+						<ul>
+							<li><a href="#" th:href="@{/souvnir/inquiry}">제작문의 등록</a></li>
+							<li><a href="#" th:href="@{/souvnir/inquiryRegister}">제작문의 조회</a></li>
+						</ul></li>
+					<li><a href="#" th:href="@{/newscenter/newsNoticeList}">뉴스센터</a>
+						<ul>
+							<li><a href="#" th:href="@{/newscenter/newsNoticeList}"> 뉴스 </a></li>
+							<li><a href="#" th:href="@{/newscenter/marketNoticeList}"> 시황정보 </a></li>
+						</ul></li>
+					<li><a href="#" th:href="@{/product/gold}">상품소개</a>
+						<ul>
+							<li><a href="#" th:href="@{/product/gold}">금</a></li>
+							<li><a href="#" th:href="@{/product/silver}">은</a></li>
+							<li><a href="#" th:href="@{/product/platinum}">백금</a></li>
+							<li><a href="#" th:href="@{/product/palladium}">팔라듐</a></li>
+							<li><a href="#" th:href="@{/product/indium}">인듐</a></li>
+							<li><a href="#" th:href="@{/product/Iridium}">이리듐</a></li>
+							<li><a href="#" th:href="@{/product/diamond}">다이아몬드</a></li>
+						</ul></li>
+					<li><a href="#" th:href="@{/company/franchiseInvitation}">가맹점모집</a></li>
+					<!-- 주석 처리 나중에 열릴수 있습 -->
+					<!--<li>
+					<a href="#">회원사공강</a>
+				</li> -->
+				</ul>
+
+
+				<div class="all_box1">
+					<a href="#layer" class="btn-layer"> <img
+						src="/img/common/all_btn1.png" alt="전체메뉴" />
+					</a>
+				</div>
+
+				<!-- Start : layer-popup content -->
+				<div id="layer" class="layer-wrap">
+					<div class="pop-layer">
+						<div class="pop-container">
+							<div class="pop-conts">
+								<!--content //-->
+								<div class="allmenu1">
+									<h2 class="alltitl">All Menu</h2>
+									<ul class="menulist">
+										<li>
+											<dl>
+												<dt>귀금속시세</dt>
+												<dd>
+													<ul>
+														<li><a href="#" th:href="@{/jewerly/DomesticPrice}">국내시세</a></li>
+														<li><a href="#" th:href="@{/jewerly/internationalPrice}">국제시세</a></li>
+														<li><a href="#" th:href="@{/jewerly/diamondPrice}">다이아몬드 시세</a></li>
+														<li><a href="#" th:href="@{/jewerly/securitiesGoldBar}">유가증권</a></li>
+													</ul>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl>
+												<dt>기념품 제작</dt>
+												<dd>
+													<ul>
+														<li><a href="#" th:href="@{/souvnir/inquiry}">제작문의 등록</a></li>
+														<li><a href="#" th:href="@{/souvnir/inquiryRegister}">제작문의 조회</a></li>
+													</ul>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl>
+												<dt>뉴스센터</dt>
+												<dd>
+													<ul>
+														<li><a href="#" th:href="@{/newscenter/marketNoticeList}"> 뉴스 </a></li>
+														<li><a href="#" th:href="@{/newscenter/newsNoticeList}"> 시황정보 </a></li>
+													</ul>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl>
+												<dt>상품소개</dt>
+												<dd>
+													<ul>
+														<li><a href="#" th:href="@{/product/gold}">금</a></li>
+														<li><a href="#" th:href="@{/product/silver}">은</a></li>
+														<li><a href="#" th:href="@{/product/platinum}">백금</a></li>
+														<li><a href="#" th:href="@{/product/palladium}">팔라듐</a></li>
+														<li><a href="#" th:href="@{/product/indium}">인듐</a></li>
+														<li><a href="#" th:href="@{/product/Iridium}">이리듐</a></li>
+														<li><a href="#" th:href="@{/product/diamond}">다이아몬드</a></li>
+													</ul>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl>
+												<dt>회사소개</dt>
+												<dd>
+													<ul>
+														<li><a href="#" th:href="@{/company/ceoMessage}">CEO인사말</a></li>
+														<li><a href="#" th:href="@{/company/organizationChart}">조직도</a></li>
+														<li><a href="#" th:href="@{/company/businessHistory}">사업연혁</a></li>
+														<li><a href="#" th:href="@{/company/businessIntroduction}">사업소개</a></li>
+														<li><a href="#" th:href="@{/company/brandIntroduction}">브랜드소개</a></li>
+														<li><a href="#" th:href="@{/company/wayToCome}">오시는 길</a></li>
+														<li><a href="#" th:href="@{/company/goldTransactionAccountOpen}">금거래 계좌 개설 방법</a></li>
+														<li><a href="#" th:href="@{/company/announcementList}">공시</a></li>
+														<li><a href="#" th:href="@{/company/franchiseInvitation}">가맹점 모집</a></li>
+													</ul>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+								</div>
+
+								<a href="#" class="btn-layerClose"> <img
+									src="/img/common/all_cross1.png" alte="닫기" />
+								</a>
+								<!--// content-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End : layer-popup content -->
+
+
+
+				<script type="text/javascript">
+					$('.btn-layer').on('click', function() {
+						var target = $(this).attr('href');
+						$(target).fadeIn();
+					});
+					$('.btn-layerClose').on('click', function() {
+						$('.layer-wrap').fadeOut();
+					});
+				</script>
+
+				<div class="clear"></div>
+			</div>
+		</div>
+		<!--=============================================================**헤더 영역 끝-->
+	</th:block>
+
+	<!-- privacy fragment -->
+	<th:block th:fragment="f-privacy">
+		<div class="pc_go">
+			<a href="#" th:href="@{/?site_preference=mobile}">모바일화면 바로가기</a>
+		</div>
+		<!--**개인정보처리 영역 시작 -->
+		<div class="infor_wrap1">
+			<div class="infor_box1">
+				<ul>
+					<li><a href="#">개인정보처리방침</a></li>
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">이메일무단수집거부</a></li>
+					<li><a href="#">온라인 상담센터</a></li>
+				</ul>
+				<select class="select_type2 sel_family">
+					<option>Family Site</option>
+				</select>
+			</div>
+		</div>
+		<!--**개인정보처리 영역 끝-->
+	</th:block>
+
+	<!-- footer fragment -->
+	<th:block th:fragment="f-footer">
+		<!-- footer -->
+		<div id="footer">
+			<div class="footer_wrap" data-aos="fade-down"
+				data-aos-easing="linear" data-aos-duration="1500"
+				data-aos-offset="-500">
+
+				<div class="footer_logo">
+					<img src="/img/common/footer_logo.png" alt="하단 로고" />
+				</div>
+
+				<div class="footer_info">
+					<address class="addres1">서울 종로구 종로 128 화영빌딩 1층</address>
+					<div class="company_num">
+						<p>TEL : 02)744-9990 FAX : 02)741-6314</p>
+					</div>
+					<address class="addres2">
+						<p>상호 : (주)한국금거래소 본점 / 대표이사 : 김안모 / 사업자등록번호 : 101-86-11518</p>
+					</address>
+					<div class="addres3">
+						<p>통신판매업신고번호 : 제01-1999호</p>
+						<p>
+							개인정보보호관리책임자 : 김철호(<a href="mailto:chu@exgold.co.kr">chu@exgold.co.kr</a>)
+						</p>
+						<p>Copyright Korea Gold Exchange All rights reserved.</p>
+					</div>
+				</div>
+
+				<ul class="footer_phone1">
+					<li class="re_time"><span>실시간 상담</span> <strong>1544
+							9993</strong></li>
+					<li class="pro_time"><span>금제품 문의</span> <strong>02
+							744 9990</strong></li>
+				</ul>
+
+			</div>
+			<!-- //footer-inner -->
+		</div>
+		<!-- //footer -->
+	</th:block>
+	
+	<th:block th:fragment="targetFragmentToIncludeInOurPage" id="tagWithFragmentAttribute">
+ 		<div id="contentGoesHere"></div>
+	</th:block>
+
+</body>
+
+</html>

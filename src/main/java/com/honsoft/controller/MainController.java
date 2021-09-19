@@ -48,7 +48,7 @@ public class MainController {
 	public String index(Model model) {
 		model.addAttribute("datetime", new Date());
         model.addAttribute("username", "Ömerrrr");
-        //model.addAttribute("mode", appMode);
+        model.addAttribute("template", "test");
         
 		return "index";
 	}

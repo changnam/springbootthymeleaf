@@ -11,6 +11,10 @@
   <section layout:fragment="content">
     <p>Page content goes here</p>
   </section>
+  <div id="tagWithReplaceAttribute" th:replace="fragments/block :: targetFragmentToIncludeInOurPage"></div>
+<div id="tagWithInsertAttribute" th:insert="fragments/block :: targetFragmentToIncludeInOurPage"></div>
+<div id="tagWithIncludeAttribute" th:include="fragments/block :: targetFragmentToIncludeInOurPage"></div>
+
   <footer>
     <p>My footer</p>
     <p layout:fragment="custom-footer">Custom footer here</p>
